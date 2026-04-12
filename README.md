@@ -1,5 +1,5 @@
 ### Overview
-A project that takes a simple model in PyTorch to learn $f(x) = \sin(x)\, e^{-0.1x^2}$, 
+A project that takes a simple model in PyTorch to learn $f(x) = \sin(x)e^{-0.1x^2}$, 
 exports it to ONNX, and runs inference in C++ via ONNX Runtime - demonstrating how a 
 trained model can be deployed in a performance-critical environment without a Python 
 runtime dependency. Results are visualized using [gnuplot-latex-utils](https://github.com/ksalamone59/gnuplot_latex_utils), producing 
