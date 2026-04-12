@@ -1,0 +1,8 @@
+.vscode/
+cpp/build/
+model_files/function_model.pth
+Plotting/ort_inference/*.dat
+Plotting/pdfs/*.pdf
+python_figures/*.pdf
+__pycache__/
+*.pyc
