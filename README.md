@@ -5,7 +5,7 @@ trained model can be deployed in a performance-critical environment without a Py
 runtime dependency. Results are visualized using [gnuplot-latex-utils](https://github.com/ksalamone59/gnuplot_latex_utils), producing 
 publication-ready plots directly from C++ output. Tested with ORT 1.22.1. 
 
-![Inference Plot](final_inference.png)
+![Inference Plot](final_inference.svg)
 
 ## Repository Layout 
 ```plaintext 
