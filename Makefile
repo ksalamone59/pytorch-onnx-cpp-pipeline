@@ -1,6 +1,10 @@
 .PHONY: all train infer plot clean
 ORT_DIR ?= /usr/local/onnxruntime
-all: train infer plot
+all: train infer plot 
+
+benchmark_cpp: cpp/benchmark.cpp 
+	mkdir -p cpp/build
+	cd cpp/build && cmake .. -DONNXRUNTIME_DIR=$(ORT_DIR) && make -j && ./onnx_benchmark
 
 train: model_files/function_model.onnx
 model_files/function_model.onnx: python/generate_model.py 
@@ -18,6 +22,6 @@ plot: Plotting/pdfs/ort_inference.pdf
 clean:
 	cd Plotting && make clean
 	cd Plotting/ort_inference && rm -f *.dat
-	[ -d cpp/build ] && cd cpp/build && make clean || true
+	[ -d cpp/build ] && rm -rf cpp/build
 	rm -f cpp/build/onnx_inference python_figures/*.pdf
 	cd model_files && rm -f *
