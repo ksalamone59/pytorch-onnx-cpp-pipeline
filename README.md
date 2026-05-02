@@ -1,11 +1,11 @@
-## Overview
+# Overview
 A project that takes a simple model in PyTorch to learn $f(x) = \sin(x)e^{-0.1x^2}$, 
 exports it to ONNX, and performs inference in C++ via ONNX Runtime (ORT) - demonstrating how a 
 trained model can be deployed in a performance-critical environment without a Python 
 runtime dependency. As well, explicit comparisons between per sample and batched inference in ORT are performed. Results are visualized using [gnuplot-latex-utils](https://github.com/ksalamone59/gnuplot_latex_utils), producing 
 publication-ready plots directly from C++ output. Tested with ORT 1.22.1. 
 
-### Workflow
+## Workflow
 End-to-end pipeline from training in PyTorch to final inferencing in ORT C++. 
 
 ```mermaid
