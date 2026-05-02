@@ -65,7 +65,7 @@ flowchart LR
 - `Plotting/`: Directory containing [gnuplot-latex-utils](https://github.com/ksalamone59/gnuplot_latex_utils) as a submodule. Automatically stores output from C++ inference into the Plotting/ort_inference directory. The Makefile that exists here will automatically run the plotting scripts. Please see the original documentation for more information.
 - `Makefile`: Runs the pipeline in order: from the python model generation and plot creation, to the C++ inference, to creating the final output. The input expected is `make ORT_DIR=/path/to/ONNXRunTime/`. Note: `make clean` will delete the model files as well for completeness. You can run `make benchmark_cpp ORT_DIR=/path/to/ONNXRunTime/` to run the benchmarking code from `benchmark.cpp`.
 - `LICENSE`: MIT License for this repo 
-- `requirements.txt`: requirements for this repository in python. Can run `pip install requirements.txt` for simplicity.
+- `requirements.txt`: requirements for this repository in python. Can run `pip install -r requirements.txt` for simplicity.
 
 ### How to Run the Code
 - Run git submodule update --init --recursive
